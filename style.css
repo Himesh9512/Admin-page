@@ -149,13 +149,62 @@ text under search bar
 }
 
 /* ***************
-hotel status logs
+hotel object status
 **************** */
 
 .hotel-object-status {
     display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
 }
 
+.hotel-object {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ***************
+hotel object items
+**************** */
+.hotel-object-overview {
+    display: grid;
+    grid-template-areas:
+    "rate rate rate arrow"
+    "booked booked checked checked"
+    ;
+    background-color: green;
+    height: 150px;
+    width: 100%;
+    border-radius: var(--theme-button-border-radius);
+}
+
+.hotel-object-overview * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.growth-rate {
+    grid-area: rate;
+}
+
+.growth-arrow {
+    grid-area: arrow;
+}
+
+.rooms-booked {
+    grid-area: booked;
+}
+
+.checked-in {
+    grid-area: checked;
+}
+
+.rooms-booked , .checked-in {
+    flex-direction: column;
+}
 /*  || booklist and other information section */
 .booklist {
     border: 1px solid black;
