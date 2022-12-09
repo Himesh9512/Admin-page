@@ -2,6 +2,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --theme-text-color: rgba(143, 142, 142, 0.6);
     --theme-button-border-radius: 12px;
+    --theme-box-shadow: 6px 3px 30px 1px rgba(106, 13, 120, 0.1);
     margin: 0;
     padding: 0;
 }
@@ -13,8 +14,10 @@
     width: 100vw;
     padding: 20px;
     column-gap: 35px;
+    margin-bottom: 40px;
 }
 
+/* || navigation sidebar */
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -23,9 +26,12 @@
     height: 100vh;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 6px 3px 30px 1px rgba(106, 13, 120, 0.1);
+    box-shadow: var(--theme-box-shadow);
 }
 
+/* ***************
+sidebar logo
+**************** */
 .sidebar .logo {
     display: flex;
     justify-content: center;
@@ -34,6 +40,15 @@
     width: 160px;
 }
 
+.logo img{
+    display: flex;
+    height: 30px;
+    width: 160px;
+}
+
+/* ***************
+navigation items
+**************** */
 .navigation {
     display: flex;
     flex-direction: column;
@@ -50,6 +65,7 @@
     align-items: center;
     width: 160px;
     height: 40px;
+    gap: 1em;
 }
 
 .navigation div:hover {
@@ -58,23 +74,16 @@
     border-radius: var(--theme-button-border-radius);
 }
 
-.logo img{
-    display: flex;
-    height: 30px;
-    width: 160px;
-}
-
-.navigation div {
-    display: flex;
-    gap: 1em;
-}
-
+/* ***************
+sidebar bottom part
+**************** */
 .sidebar-bottom {
     display: flex;
     gap: 20px;
 }
 
 .chat-box {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,6 +93,7 @@
 }
 
 .settings {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 9px;
@@ -92,10 +102,39 @@
     padding: 12px;
 }
 
+/* || content container */
 .content {
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    height: 100vh;
 }
 
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+/* ***************
+search bar
+**************** */
+.search-bar {
+    display: flex;
+    gap: 1em;
+}
+
+.search-bar #search {
+    border: none;
+}
+
+/* ***************
+text under search bar
+**************** */
+
+/*  || booklist and other information section */
 .booklist {
     border: 1px solid black;
 }
