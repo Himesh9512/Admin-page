@@ -1,8 +1,9 @@
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --theme-text-color: rgba(143, 142, 142, 0.6);
-    --theme-button-border-radius: 12px;
+    --theme-border-radius: 12px;
     --theme-box-shadow: 4px 3px 15px 1px #e2e8f0;
+    --theme-gap: 15px;
     margin: 0;
     padding: 0;
 }
@@ -43,7 +44,7 @@
 .navigation {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--theme-gap);
     margin-bottom: 50px;
 }
 .navigation div {
@@ -60,7 +61,7 @@
 .navigation div:hover {
     color: rgb(0, 0, 196);
     background-color: rgba(193, 193, 193, 0.1);
-    border-radius: var(--theme-button-border-radius);
+    border-radius: var(--theme-border-radius);
 }
 /* *************** sidebar bottom part **************** */
 .sidebar-bottom {
@@ -82,7 +83,7 @@
     align-items: center;
     gap: 9px;
     background-color: rgba(166, 163, 163, 0.1);
-    border-radius: var(--theme-button-border-radius);
+    border-radius: var(--theme-border-radius);
     padding: 12px;
 }
 /* || content container */
@@ -92,7 +93,7 @@
     justify-content: start;
     align-items: stretch;
     height: 100vh;
-    gap: 15px;
+    gap: var(--theme-gap);
     padding: 30px;
 }
 .text-content {
@@ -100,7 +101,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
-    gap: 15px;
+    gap: var(--theme-gap);
 }
 /* *************** search bar **************** */
 .search-bar {
@@ -129,12 +130,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto-fill,minmax(fit-content,1fr));
-    gap: 15px;
+    gap: var(--theme-gap);
     height: 100%;
     width: 100%;
 }
 .project-item {
-    border-radius: var(--theme-button-border-radius);
+    border-radius: var(--theme-border-radius);
     background-color: #94a3b8;
     display: grid;
     grid-template-columns: 4fr 1fr;
@@ -157,10 +158,10 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 15px;
+    gap: var(--theme-gap);
     background-color: #64748b;
     padding-top: 15px;
-    border-radius: var(--theme-button-border-radius);
+    border-radius: var(--theme-border-radius);
 }
 .project-item * {
     display: flex;
@@ -179,9 +180,10 @@
     height: 100vh;
     width: 20vw;
     padding: 20px;
-    row-gap: 15px;
+    row-gap: var(--theme-gap);
     margin-bottom: 40px;
 }
+/* ***************user profile **************** */
 .user-profile {
     display: flex;
     flex-direction: row;
@@ -201,6 +203,7 @@
     width: 2em;
     border-radius: 45px;
 }
+/* *************** trending container**************** */
 ul {
     list-style: none;
 }
@@ -210,7 +213,7 @@ ul {
     align-items: center;
     padding: 10px;
     border: 1px solid black;
-    border-radius: var(--theme-button-border-radius);
+    border-radius: var(--theme-border-radius);
 }
 .trending .card {
     display: flex;
@@ -227,7 +230,7 @@ ul {
 }
 .trend {
     display: flex;
-    gap: 15px;
+    gap: var(--theme-gap);
 }
 .trend .account {
     display: flex;
@@ -236,6 +239,7 @@ ul {
     justify-content: center;
     font-size: 0.9rem;
 }
+/* *************** announcement container **************** */
 .announcement {
     width: 25ch;
     padding: 1rem 0;
@@ -249,6 +253,7 @@ ul {
 .announcement h5 {
     font-size: 0.9rem;
     margin-bottom: 0.25em;
+    
 }
 .announcement p {
     font-size: 0.8rem;
@@ -263,5 +268,9 @@ ul {
 .announcements .card {
     box-shadow: var(--theme-box-shadow);
     padding: 1rem;
-    border-radius: var(--theme-button-border-radius);
+    border-radius: var(--theme-border-radius);
+}
+.announcements h3 {
+    text-align: center;
+    padding-bottom: 0.4em;
 }
