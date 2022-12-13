@@ -22,11 +22,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 90%;
     padding: 20px;
     border-radius: 20px;
     box-shadow: var(--theme-box-shadow);
     border: var(--theme-border);
+    min-height: fit-content;
 }
 /* *************** sidebar logo **************** */
 .sidebar .logo {
@@ -35,6 +36,7 @@
     align-items: center;
     height: 30px;
     width: 160px;
+    margin-bottom: 50px;
 }
 .logo img{
     display: flex;
@@ -60,8 +62,8 @@
     gap: 1em;
 }
 .navigation div:hover {
-    color: rgb(0, 0, 196);
-    background-color: rgba(193, 193, 193, 0.1);
+    color: #fff;
+    background-color: #0f172a;
     border-radius: var(--theme-border-radius);
 }
 /* *************** sidebar bottom part **************** */
@@ -77,6 +79,8 @@
     background-color: #d946ef;
     border-radius: 90px;
     padding: 12px;
+    border: var(--theme-border);
+    box-shadow: 2px 1px black;
 }
 .settings {
     cursor: pointer;
@@ -86,6 +90,8 @@
     background-color: rgba(166, 163, 163, 0.1);
     border-radius: var(--theme-border-radius);
     padding: 12px;
+    border: var(--theme-border);
+    box-shadow: var(--theme-box-shadow);
 }
 /* || content container */
 .content {
@@ -93,7 +99,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: stretch;
-    height: 100vh;
+    height: 90%;
     gap: var(--theme-gap);
     padding: 30px;
 }
@@ -124,7 +130,7 @@
 .greeting-message {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .greeting-message span {
     font-family: 'LackRegular';
@@ -133,8 +139,7 @@
 /* *************** projects section **************** */
 .projects {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto-fill,minmax(fit-content,1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: var(--theme-gap);
     height: 100%;
     width: 100%;
@@ -272,7 +277,7 @@ ul {
     overflow: hidden;
 }
 .announcement + .announcement {
-    border-top: var(--gray-2) 1px solid;
+    border-top: 1px solid black;
 }
 .announcements .card {
     border: var(--theme-border);
